@@ -25,10 +25,8 @@ cv::Mat imgToBlob(cv::Mat image)
 {
 	cv::Mat imNorm = normalizeImage(image);
 	cv::Mat imStNorm = standardizeImage(imNorm);
-	
-	cv::Size inputSz(0, 0);
 
-	inputSz = cv::Size(224, 224);
+	cv::Size inputSz = cv::Size(224, 224);
 
 	auto input = cv::dnn::blobFromImage(
 		imStNorm,

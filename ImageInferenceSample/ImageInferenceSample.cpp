@@ -70,7 +70,7 @@ int parseCommandLineArgs(int argc, char* argv[])
 	desc.add_options()
 		("help,h",
 			"To use this program, in cmd pass: ImageInferenceSample --model <Path_to_model_file(s)> --imageset <Path_to_imageset> --jsonfile <Path_to_json_with_classIDs>")
-		("model,m", value<std::string>(), "<Path to xml>;<Path to bin> or  <Path to onnx> (If XML,BIN they HAVE to be separated by a semi-colon)")
+		("model,m", value<std::string>(), "<Path to xml>,<Path to bin> or <Path to onnx> (If XML,BIN they HAVE to be separated by a comma)")
 		("imageset,i", value<std::string>(), "Path to Image Set folder")
 		("jsonfile,j", value<std::string>(), "Path to json class labels");
 
@@ -103,7 +103,7 @@ int main(int argc, char * argv[])
 	{
 		if (argc == 2 && 
 			(std::string(argv[1]) == std::string("--help") || 
-				std::string(argv[1]) == std::string("-h"))) //to let help pass
+				std::string(argv[1]) == std::string("-h"))) //to let 'help' option pass
 		{			}
 		else
 		{
@@ -138,7 +138,7 @@ int main(int argc, char * argv[])
 	else
 	{
 		//for now I only support bin,xml output from OpenVINO Model Optimizer
-		auto loc = model_file.find(';');
+		auto loc = model_file.find(',');
 		if (loc == std::string::npos)
 			return EXIT_FAILURE;
 		else
@@ -166,7 +166,10 @@ int main(int argc, char * argv[])
 				else
 					return EXIT_FAILURE;
 
-				net = cv::dnn::readNetFromModelOptimizer(xmlPath, binPath);
+				if (fs::exists(xmlPath) && fs::exists(binPath))
+					net = cv::dnn::readNetFromModelOptimizer(xmlPath, binPath);
+				else
+					return EXIT_FAILURE;
 			}
 			else
 				return EXIT_FAILURE;
