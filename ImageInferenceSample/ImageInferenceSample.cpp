@@ -70,7 +70,7 @@ int parseCommandLineArgs(int argc, char* argv[])
 	desc.add_options()
 		("help,h",
 			"To use this program, in cmd pass: ImageInferenceSample --model <Path_to_model_file(s)> --imageset <Path_to_imageset> --jsonfile <Path_to_json_with_classIDs>")
-		("model,m", value<std::string>(), "Model Path")
+		("model,m", value<std::string>(), "<Path to xml>;<Path to bin> or  <Path to onnx> (If XML,BIN they HAVE to be separated by a semi-colon)")
 		("imageset,i", value<std::string>(), "Path to Image Set folder")
 		("jsonfile,j", value<std::string>(), "Path to json class labels");
 
@@ -99,7 +99,7 @@ int parseCommandLineArgs(int argc, char* argv[])
 
 int main(int argc, char * argv[])
 {
-	if (argc < 7)
+	if (argc != 7)
 	{
 		if (argc == 2 && 
 			(std::string(argv[1]) == std::string("--help") || 
@@ -116,16 +116,62 @@ int main(int argc, char * argv[])
 	if (parseCommandLineArgs(argc, argv) != EXIT_SUCCESS)
 		return EXIT_FAILURE;
 
-	if (!fs::exists(opts.pathToModel) ||
-		!fs::is_directory(opts.pathToImageSet) ||
+	if (!fs::is_directory(opts.pathToImageSet) ||
 		!fs::exists(opts.pathToClassIDJSON))
 	{
 		std::cout << "One or more of the arguments are invalid" << std::endl;
 		return EXIT_FAILURE;
 	}
 
-	std::string onnx_file = opts.pathToModel;
-	auto net = cv::dnn::readNetFromONNX(onnx_file);
+	std::string model_file = opts.pathToModel;
+
+	cv::dnn::Net net = cv::dnn::Net();
+
+	//for now onnx is the only 1 file model type supported
+	if (fs::extension(model_file) == std::string(".onnx"))
+	{
+		if (fs::exists(model_file))
+			net = cv::dnn::readNetFromONNX(model_file);
+		else
+			return EXIT_FAILURE;
+	}
+	else
+	{
+		//for now I only support bin,xml output from OpenVINO Model Optimizer
+		auto loc = model_file.find(';');
+		if (loc == std::string::npos)
+			return EXIT_FAILURE;
+		else
+		{
+			std::string part1 = model_file.substr(0, loc);
+			std::string part2 = model_file.substr(loc + 1);
+
+			std::string xmlPath, binPath;
+			//confirming that atleast one part of the files are either xml or bin
+			if (fs::extension(part1) == std::string(".xml") ||
+				(fs::extension(part1) == std::string(".bin")))
+			{
+				if (fs::extension(part1) == std::string(".xml") &&
+					fs::extension(part2) == std::string(".bin"))
+				{
+					xmlPath = part1;
+					binPath = part2;
+				}
+				else if (fs::extension(part2) == std::string(".xml") &&
+					fs::extension(part1) == std::string(".bin"))
+				{
+					xmlPath = part2;
+					binPath = part1;
+				}
+				else
+					return EXIT_FAILURE;
+
+				net = cv::dnn::readNetFromModelOptimizer(xmlPath, binPath);
+			}
+			else
+				return EXIT_FAILURE;
+		}
+	}
 
 	net.setPreferableBackend(cv::dnn::DNN_BACKEND_INFERENCE_ENGINE);
 	net.setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
