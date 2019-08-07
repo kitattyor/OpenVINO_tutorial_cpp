@@ -69,7 +69,7 @@ int parseCommandLineArgs(int argc, char* argv[])
 
 	desc.add_options()
 		("help,h",
-			"To use this program, in cmd pass: ImageInferenceSample --model <Path_to_model> --imageset <Path_to_imageset> --jsonfile <Path_to_json_with_classIDs>")
+			"To use this program, in cmd pass: ImageInferenceSample --model <Path_to_model_file(s)> --imageset <Path_to_imageset> --jsonfile <Path_to_json_with_classIDs>")
 		("model,m", value<std::string>(), "Model Path")
 		("imageset,i", value<std::string>(), "Path to Image Set folder")
 		("jsonfile,j", value<std::string>(), "Path to json class labels");
