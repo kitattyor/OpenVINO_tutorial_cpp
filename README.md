@@ -25,7 +25,7 @@ I used the OpenCV version that comes packed with the OpenVINO installer.
 
 ### Test 
 
-Assuming normal build paths (<project>\<release> or <debug>\ImageInferenceSample.exe)
+Assuming normal build paths (project_dir\release or debug\ImageInferenceSample.exe)
 
 `.\ImageInferenceSample -m ..\..\test\ONNX_Models\resnet18v2.onnx -i ..\..\test\ImageNetDataset -j ..\..\test\ImageNetDataset\imagenet1000_clsid_to_human.json`
 
