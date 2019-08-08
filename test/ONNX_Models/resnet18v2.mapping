@@ -1,0 +1,251 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="resnetv22_stage3_activation3" out_port_id="resnetv22_stage3_activation3"/>
+		<IR id="40" name="resnetv22_stage3_activation3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_conv1_fwd" out_port_id="resnetv22_stage2_conv1_fwd"/>
+		<IR id="21" name="resnetv22_stage2_conv1_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_batchnorm3_fwd" out_port_id="resnetv22_stage1_batchnorm3_fwd"/>
+		<IR id="13" name="resnetv22_stage1_conv2_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_relu1_fwd" out_port_id="resnetv22_relu1_fwd"/>
+		<IR id="57" name="resnetv22_relu1_fwd" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3__plus0" out_port_id="resnetv22_stage3__plus0"/>
+		<IR id="36" name="resnetv22_stage3__plus0" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_conv2_fwd" out_port_id="resnetv22_stage4_conv2_fwd"/>
+		<IR id="48" name="resnetv22_stage4_conv2_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_batchnorm1_fwd" out_port_id="resnetv22_batchnorm1_fwd"/>
+		<IR id="2" name="resnetv22_conv0_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_pool0_fwd" out_port_id="resnetv22_pool0_fwd"/>
+		<IR id="4" name="resnetv22_pool0_fwd" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_activation2" out_port_id="resnetv22_stage3_activation2"/>
+		<IR id="38" name="resnetv22_stage3_activation2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_batchnorm0_fwd" out_port_id="resnetv22_batchnorm0_fwd"/>
+		<IR id="1" name="Mul1_/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_activation1" out_port_id="resnetv22_stage2_activation1"/>
+		<IR id="20" name="resnetv22_stage2_activation1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_conv3_fwd" out_port_id="resnetv22_stage1_conv3_fwd"/>
+		<IR id="15" name="resnetv22_stage1_conv3_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_activation0" out_port_id="resnetv22_stage1_activation0"/>
+		<IR id="6" name="resnetv22_stage1_activation0" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_pool1_fwd" out_port_id="resnetv22_pool1_fwd"/>
+		<IR id="58" name="resnetv22_pool1_fwd" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3__plus1" out_port_id="resnetv22_stage3__plus1"/>
+		<IR id="42" name="resnetv22_stage3__plus1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_batchnorm3_fwd" out_port_id="resnetv22_stage3_batchnorm3_fwd"/>
+		<IR id="39" name="resnetv22_stage3_conv3_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_batchnorm3_fwd" out_port_id="resnetv22_stage4_batchnorm3_fwd"/>
+		<IR id="52" name="resnetv22_stage4_conv3_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_activation0" out_port_id="resnetv22_stage4_activation0"/>
+		<IR id="44" name="resnetv22_stage4_activation0" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_activation2" out_port_id="resnetv22_stage1_activation2"/>
+		<IR id="12" name="resnetv22_stage1_activation2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_batchnorm3_fwd" out_port_id="resnetv22_stage2_batchnorm3_fwd"/>
+		<IR id="26" name="resnetv22_stage2_conv3_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_activation3" out_port_id="resnetv22_stage1_activation3"/>
+		<IR id="14" name="resnetv22_stage1_activation3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4__plus1" out_port_id="resnetv22_stage4__plus1"/>
+		<IR id="55" name="resnetv22_stage4__plus1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_conv4_fwd" out_port_id="resnetv22_stage4_conv4_fwd"/>
+		<IR id="54" name="resnetv22_stage4_conv4_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_activation1" out_port_id="resnetv22_stage3_activation1"/>
+		<IR id="33" name="resnetv22_stage3_activation1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_batchnorm0_fwd" out_port_id="resnetv22_stage3_batchnorm0_fwd"/>
+		<IR id="30" name="Mul1_2244/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_batchnorm1_fwd" out_port_id="resnetv22_stage3_batchnorm1_fwd"/>
+		<IR id="32" name="resnetv22_stage3_conv0_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_batchnorm2_fwd" out_port_id="resnetv22_stage2_batchnorm2_fwd"/>
+		<IR id="24" name="Mul1_2220/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_activation2" out_port_id="resnetv22_stage2_activation2"/>
+		<IR id="25" name="resnetv22_stage2_activation2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4__plus0" out_port_id="resnetv22_stage4__plus0"/>
+		<IR id="49" name="resnetv22_stage4__plus0" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_conv2_fwd" out_port_id="resnetv22_stage3_conv2_fwd"/>
+		<IR id="35" name="resnetv22_stage3_conv2_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_batchnorm0_fwd" out_port_id="resnetv22_stage4_batchnorm0_fwd"/>
+		<IR id="43" name="Mul1_2292/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_batchnorm2_fwd" out_port_id="resnetv22_batchnorm2_fwd"/>
+		<IR id="56" name="Mul1_2340/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_activation1" out_port_id="resnetv22_stage1_activation1"/>
+		<IR id="8" name="resnetv22_stage1_activation1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_batchnorm2_fwd" out_port_id="resnetv22_stage4_batchnorm2_fwd"/>
+		<IR id="50" name="Mul1_2316/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_activation0" out_port_id="resnetv22_stage2_activation0"/>
+		<IR id="18" name="resnetv22_stage2_activation0" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_activation0" out_port_id="resnetv22_stage3_activation0"/>
+		<IR id="31" name="resnetv22_stage3_activation0" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_flatten0_reshape0" out_port_id="resnetv22_flatten0_reshape0"/>
+		<IR id="60" name="resnetv22_flatten0_reshape0" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2__plus1" out_port_id="resnetv22_stage2__plus1"/>
+		<IR id="29" name="resnetv22_stage2__plus1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_batchnorm1_fwd" out_port_id="resnetv22_stage4_batchnorm1_fwd"/>
+		<IR id="45" name="resnetv22_stage4_conv0_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_conv2_fwd" out_port_id="resnetv22_stage2_conv2_fwd"/>
+		<IR id="22" name="resnetv22_stage2_conv2_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_batchnorm1_fwd" out_port_id="resnetv22_stage2_batchnorm1_fwd"/>
+		<IR id="19" name="resnetv22_stage2_conv0_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_conv1_fwd" out_port_id="resnetv22_stage3_conv1_fwd"/>
+		<IR id="34" name="resnetv22_stage3_conv1_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_conv4_fwd" out_port_id="resnetv22_stage2_conv4_fwd"/>
+		<IR id="28" name="resnetv22_stage2_conv4_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_batchnorm0_fwd" out_port_id="resnetv22_stage2_batchnorm0_fwd"/>
+		<IR id="17" name="Mul1_2196/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_activation1" out_port_id="resnetv22_stage4_activation1"/>
+		<IR id="46" name="resnetv22_stage4_activation1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_batchnorm2_fwd" out_port_id="resnetv22_stage1_batchnorm2_fwd"/>
+		<IR id="11" name="Mul1_2172/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_activation3" out_port_id="resnetv22_stage4_activation3"/>
+		<IR id="53" name="resnetv22_stage4_activation3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1__plus1" out_port_id="resnetv22_stage1__plus1"/>
+		<IR id="16" name="resnetv22_stage1__plus1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1__plus0" out_port_id="resnetv22_stage1__plus0"/>
+		<IR id="10" name="resnetv22_stage1__plus0" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_batchnorm1_fwd" out_port_id="resnetv22_stage1_batchnorm1_fwd"/>
+		<IR id="7" name="resnetv22_stage1_conv0_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_conv4_fwd" out_port_id="resnetv22_stage3_conv4_fwd"/>
+		<IR id="41" name="resnetv22_stage3_conv4_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_relu0_fwd" out_port_id="resnetv22_relu0_fwd"/>
+		<IR id="3" name="resnetv22_relu0_fwd" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_dense0_fwd" out_port_id="0"/>
+		<IR id="61" name="resnetv22_dense0_fwd" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_conv1_fwd" out_port_id="resnetv22_stage1_conv1_fwd"/>
+		<IR id="9" name="resnetv22_stage1_conv1_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage1_batchnorm0_fwd" out_port_id="resnetv22_stage1_batchnorm0_fwd"/>
+		<IR id="5" name="Mul1_2148/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage3_batchnorm2_fwd" out_port_id="resnetv22_stage3_batchnorm2_fwd"/>
+		<IR id="37" name="Mul1_2268/Fused_Mul_/FusedScaleShift_" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="data" out_port_id="data"/>
+		<IR id="0" name="data" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2_activation3" out_port_id="resnetv22_stage2_activation3"/>
+		<IR id="27" name="resnetv22_stage2_activation3" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_conv1_fwd" out_port_id="resnetv22_stage4_conv1_fwd"/>
+		<IR id="47" name="resnetv22_stage4_conv1_fwd" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_attr_tensor164" out_port_id="reshape_attr_tensor164"/>
+		<IR id="59" name="reshape_attr_tensor164/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage4_activation2" out_port_id="resnetv22_stage4_activation2"/>
+		<IR id="51" name="resnetv22_stage4_activation2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="resnetv22_stage2__plus0" out_port_id="resnetv22_stage2__plus0"/>
+		<IR id="23" name="resnetv22_stage2__plus0" out_port_id="2"/>
+	</map>
+</mapping>
