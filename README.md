@@ -1,5 +1,7 @@
 # OpenVINO_tutorial_cpp
 
+A complete code sample on how to use the OpenVINO toolkit to infer images using pre-trained models in ONNX format, or from the OpenVINO Model Optimizer.
+
 ### Requirements
 * [Intel OpenVINO toolkit](https://software.intel.com/en-us/openvino-toolkit/choose-download)
 * [jsonCPP](https://github.com/open-source-parsers/jsoncpp)
@@ -9,8 +11,6 @@ jsonCPP and Boost are not essential for understanding the general idea of the co
 jsonCPP is used because the class names corresponding to the classIDs were in a json file. 
 Boost is used for cross-platform filesystem handling and command line options implementation.
 I used the OpenCV version that comes packed with the OpenVINO installer.
-
-The project is built using MS Visual Studio 2019.
 
 #### Environment vars
 * BOOST_ROOT points to the boost directory
