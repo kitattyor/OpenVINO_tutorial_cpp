@@ -8,7 +8,7 @@ A complete code sample on how to use the OpenVINO toolkit to infer images using 
 * [Boost](https://www.boost.org/)
 
 jsonCPP and Boost are not essential for understanding the general idea of the code. 
-jsonCPP is used because the class names corresponding to the classIDs were in a json file. 
+jsonCPP is used because the class labels corresponding to the classIDs were in a json file. 
 Boost is used for cross-platform filesystem handling and command line options implementation.
 I used the OpenCV version that comes packed with the OpenVINO installer.
 
