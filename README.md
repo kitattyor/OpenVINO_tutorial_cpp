@@ -1,7 +1,7 @@
 # OpenVINO_tutorial_cpp
 
 ### Requirements
-* [Intel OpenVino toolkit](https://software.intel.com/en-us/openvino-toolkit/choose-download)
+* [Intel OpenVINO toolkit](https://software.intel.com/en-us/openvino-toolkit/choose-download)
 * [jsonCPP](https://github.com/open-source-parsers/jsoncpp)
 * [Boost](https://www.boost.org/)
 
